@@ -1,7 +1,7 @@
 FROM node:16 as base
 WORKDIR /app
 COPY ./package.json ./
-RUN npm install
+RUN npm run bootstrap
 COPY ./lerna.json ./
 COPY . /app
 RUN npm run build

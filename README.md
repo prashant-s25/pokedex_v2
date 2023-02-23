@@ -21,9 +21,11 @@
 ## Features
 
 - _Quick start_
-- _Integrated ESLint, Prettier_
 - _Simple and Standard scaffolding_
 - _Common Error Handler_
+- Docker integrated project
+- **Testing**: unit and integration tests using [Jest](https://jestjs.io)
+- **Redux** : integrated with the help of [Redux toolkit](https://redux-toolkit.js.org/)
 - **Linting**: with https://eslint.org and https://prettier.io
 
 ## Getting started
@@ -32,8 +34,9 @@ Makes easier to write good redux applications and speeds up development.
 
 - Node <https://nodejs.org/en/> use the LTS version
 - NPM
+- [TypeScript](https://www.typescriptlang.org/docs/)
 
-### Create Development Environment
+### Application Setup
 
 Use template strings, object destructuring, arrow functions, Interfaces, JSX syntax and more.
 
@@ -90,7 +93,24 @@ Below is a list of all the scripts this template has available:
 | `build`             | Full build. Runs ALL build tasks                |
 | `package:pokedex`   | This script runs project in development mode    |
 | `start`             | This script runs project in production mode     |
+| `test`              | This script runs the Test case present in the project     |
 
+
+## NPM Modules
+
+Node Modules folder is the repository of modules/library which you are using inside your project. What ever you are importing in your project that module or library should present inside the mode_module folder.When you do npm install that time that module or the library install inside the node_module folder and one entry added in package.json file
+
+- [MUI-Component](https://mui.com/material-ui/react-grid/)
+- [MUI datagrid](https://mui.com/x/react-data-grid/)
+- [react-dom](https://reactjs.org/docs/react-dom.html)
+- [react-redux](https://react-redux.js.org/)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [redux-toolkit](https://redux-toolkit.js.org/)
+- [next-redux-wrapper](https://github.com/kirill-konshin/next-redux-wrapper)
+- [Testing library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/docs/getting-started)
+- [redux-mock-store](https://www.npmjs.com/package/redux-mock-store)
+- [axios](https://www.npmjs.com/package/axios)
 ## Stay in touch
 
 - GitHub - https://github.com/prashant-s25/pokedex_v2
