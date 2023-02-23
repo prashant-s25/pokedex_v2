@@ -64,6 +64,16 @@ $ npm run test
 ```bash
 $ npm run start
 ```
+
+#### Running using docker
+
+```bash
+# Creating docker image from base folder
+$ docker build .
+
+# runnnig the docker image using imageID
+$ docker run -d -p <EXPOSED PORT>:<CONTAINER PORT> <imageId>
+```
 #### Running the scripts
 
 All the different build steps are orchestrated via https://docs.npmjs.com/misc/scripts.
