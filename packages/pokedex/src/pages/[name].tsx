@@ -8,9 +8,9 @@ import {
   pokemonDetailsState,
 } from "../store/pokedexDetailsSlice";
 import { PokemonData } from "../store/pokedexSlice";
-import { AppDispatch, wrapper } from "../store/store";
+import { wrapper } from "../store/store";
 
-const Pokemon: React.FC<any> = (props) => {
+const Pokemon: React.FC<any> = () => {
   const data = useSelector(pokemonDetailsState);
   return <div>{!!data && <PokemonCard pokemonData={data} />}</div>;
 };

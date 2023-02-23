@@ -26,7 +26,6 @@
 - Docker integrated project
 - **Testing**: unit and integration tests using [Jest](https://jestjs.io)
 - **Redux** : integrated with the help of [Redux toolkit](https://redux-toolkit.js.org/)
-- **Linting**: with https://eslint.org and https://prettier.io
 
 ## Getting started
 
