@@ -12,7 +12,6 @@ import { AppDispatch, wrapper } from "../store/store";
 
 const Pokemon: React.FC<any> = (props) => {
   const data = useSelector(pokemonDetailsState);
-  console.log({data})
   return <div>{!!data && <PokemonCard pokemonData={data} />}</div>;
 };
 
