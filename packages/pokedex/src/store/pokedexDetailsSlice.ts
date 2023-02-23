@@ -1,11 +1,12 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { HYDRATE } from 'next-redux-wrapper';
 import {  fetchRequestById } from 'utils';
+import { AppState } from './store';
 
 interface IStat{
   [key:string]:number
 }
-interface IPokemonName{
+interface IPokemonDetails{
   name:string;
   abilities:string[];
   height:number;
@@ -15,13 +16,13 @@ interface IPokemonName{
 }
 const initialState = {
   name:'',
-  abilities:[],
+  abilities:'',
   height:0,
   stats:{},
-  types:[],
+  types:'',
   weight:0,
 }
-  export const fetchPokemonName = createAsyncThunk(
+  export const fetchDetailsName = createAsyncThunk(
     "user/get_pokemon_details",
     async (id: string = '') => {
       try {
@@ -47,18 +48,18 @@ const initialState = {
   );
 
 // Actual Slice
-export const pokedexNameSlice = createSlice({
-  name: 'pokedexName',
+export const pokedexDetailsSlice = createSlice({
+  name: 'pokedexDetails',
   initialState,
   reducers: {},
   extraReducers: (builder: any) => {
     builder.addCase(HYDRATE, (state: any, action: any) => {
       return {
         ...state,
-        ...action.payload.pokedexName,
+        ...action.payload.pokedexDetails,
       };
     });
-      builder.addCase(fetchPokemonName.fulfilled, (state : IPokemonName, action: any) => {
+      builder.addCase(fetchDetailsName.fulfilled, (state : IPokemonDetails, action: any) => {
         console.log({payload:action.payload})
         state.name=action.payload.name;
         state.abilities=action.payload.abilities;
@@ -71,6 +72,6 @@ export const pokedexNameSlice = createSlice({
 });
 
 
-export const pokemonNameState = (state: any) => state.pokedexName;
+export const pokemonDetailsState = (state: AppState) => state.pokedexDetails;
 
-export default pokedexNameSlice;
+export default pokedexDetailsSlice;

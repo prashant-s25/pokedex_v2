@@ -1,16 +1,17 @@
+import * as React from 'react';
 import { PokemonCard } from "components";
 import { GetStaticPaths } from "next";
 import { useSelector } from "react-redux";
 import { fetchRequest } from "utils";
 import {
-  fetchPokemonName,
-  pokemonNameState,
+  fetchDetailsName,
+  pokemonDetailsState,
 } from "../store/pokedexDetailsSlice";
 import { PokemonData } from "../store/pokedexSlice";
-import { wrapper } from "../store/store";
+import { AppDispatch, wrapper } from "../store/store";
 
 const Pokemon: React.FC<any> = (props) => {
-  const data = useSelector(pokemonNameState);
+  const data = useSelector(pokemonDetailsState);
   console.log({data})
   return <div>{!!data && <PokemonCard pokemonData={data} />}</div>;
 };
@@ -27,8 +28,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps = wrapper.getStaticProps((store) => async (context) => {
-  const data: any = await store.dispatch(
-    fetchPokemonName(context?.params?.name as string)
+  const data: any = await store.dispatch<any>(
+    fetchDetailsName(context?.params?.name as string)
   );
 
   if (!data) {

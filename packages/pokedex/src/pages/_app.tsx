@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { AppProps } from 'next/app';
 import { wrapper } from '../store/store';
 import { Provider } from 'react-redux';
