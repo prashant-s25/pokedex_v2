@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import {
   DataGrid,
@@ -61,7 +62,7 @@ const Index = () => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store: AppStore) =>
     async ({}) => {
-      await store.dispatch(fetchPokemonData(1));
+      await store.dispatch<any>(fetchPokemonData(1));
       return {
         props: {},
       };

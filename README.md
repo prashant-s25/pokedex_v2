@@ -39,7 +39,7 @@ Use template strings, object destructuring, arrow functions, Interfaces, JSX syn
 
 ```bash
 // clone the application
-$ git clone https://github.com/prashant-s25/pokedex
+$ git clone https://github.com/prashant-s25/pokedex_v2.git
 ```
 #### Setting up the Application
 
@@ -74,12 +74,12 @@ To call a script, simply run `npm run <script-name>` from the command line.
 You'll notice that npm scripts can call each other which makes it easy to compose complex builds out of simple individual build scripts.
 Below is a list of all the scripts this template has available:
 
-| Npm Script      | Description                                     |
-| --------------- | ----------------------------------------------- |
-| `bootstrap`     | Install all the dependencies for all code bases |
-| `build`         | Full build. Runs ALL build tasks                |
+| Npm Script          | Description                                     |
+| ---------------     | ----------------------------------------------- |
+| `bootstrap`         | Install all the dependencies for all code bases |
+| `build`             | Full build. Runs ALL build tasks                |
 | `package:pokedex`   | This script runs project in development mode    |
-| `start`  | This script runs project in production mode     |
+| `start`             | This script runs project in production mode     |
 
 ## Stay in touch
 
