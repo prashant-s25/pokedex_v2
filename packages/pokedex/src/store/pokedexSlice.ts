@@ -40,6 +40,11 @@ export const pokedexSlice = createSlice({
   },
   extraReducers: (builder: any) => {
     builder.addCase(HYDRATE, (state: any, action: any) => {
+      if(state.currentPage>action.payload.pokedex.currentPage){
+        return {
+          ...state
+        };
+      }
       return {
         ...state,
         ...action.payload.pokedex,
