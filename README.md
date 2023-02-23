@@ -37,33 +37,33 @@ Makes easier to write good redux applications and speeds up development.
 
 Use template strings, object destructuring, arrow functions, Interfaces, JSX syntax and more.
 
-bash
+```bash
 // clone the application
 $ git clone https://github.com/prashant-s25/pokedex
-
+```
 #### Seeting up the Application
 
-bash
+```bash
 // Install the required npm modules
 $ npm run bootstrap
 //creating the dist distributables
 $ npm run build
-
+```
 #### Running the application in development mode
 
-bash
+```bash
 $ npm run package:pokedex
-
+```
 #### Running the Test Cases
 
-bash
-$ npm run pokedex:test
-
+```bash
+$ npm run test
+```
 #### Running in Production mode
 
-bash
+```bash
 $ npm run start
-
+```
 #### Running the scripts
 
 All the different build steps are orchestrated via https://docs.npmjs.com/misc/scripts.
