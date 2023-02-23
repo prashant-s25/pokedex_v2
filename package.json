@@ -8,7 +8,7 @@
     "start": "run-p --print-label package:*",
     "test":"lerna run --scope pokedex --stream test",
     "build": "lerna run --scope components --stream build && lerna run --scope utils --stream build &&lerna run --scope pokedex --stream build ",
-    "pokedex:dockerize": "lerna-dockerize --template-dockerfile-name Dockerfile.template"
+    "lerna-dockerize": "lerna-dockerize --template-dockerfile-name Dockerfile.template"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
