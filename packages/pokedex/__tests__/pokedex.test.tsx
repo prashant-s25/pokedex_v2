@@ -64,7 +64,7 @@ const mock_store = {
     pokemonCount: 1279,
     currentPage: 1
 },
-pokedexDetails: {
+pokedexName: {
     "name": "charmander",
     "abilities": "blaze, solar-power",
     "height": 6,

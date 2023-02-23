@@ -9,7 +9,7 @@ import {
 import { PokemonData } from "../store/pokedexSlice";
 import { wrapper } from "../store/store";
 
-const Pokemon: React.FC<any> = () => {
+const Pokemon: React.FC<any> = (props) => {
   const data = useSelector(pokemonNameState);
   console.log({data})
   return <div>{!!data && <PokemonCard pokemonData={data} />}</div>;

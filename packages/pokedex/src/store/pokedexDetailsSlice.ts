@@ -48,7 +48,7 @@ const initialState = {
 
 // Actual Slice
 export const pokedexNameSlice = createSlice({
-  name: 'pokedexDetails',
+  name: 'pokedexName',
   initialState,
   reducers: {},
   extraReducers: (builder: any) => {
@@ -71,6 +71,6 @@ export const pokedexNameSlice = createSlice({
 });
 
 
-export const pokemonNameState = (state: any) => state.pokedexDetails;
+export const pokemonNameState = (state: any) => state.pokedexName;
 
 export default pokedexNameSlice;
