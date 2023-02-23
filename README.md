@@ -41,7 +41,7 @@ Use template strings, object destructuring, arrow functions, Interfaces, JSX syn
 // clone the application
 $ git clone https://github.com/prashant-s25/pokedex
 ```
-#### Seeting up the Application
+#### Setting up the Application
 
 ```bash
 // Install the required npm modules
