@@ -71,10 +71,10 @@ $ npm run start
 #### Running using docker
 
 ```bash
-# Creating docker image from base folder
+// Creating docker image from base folder
 $ docker build .
 
-# runnnig the docker image using imageID
+// Runnnig the docker image using imageID
 $ docker run -d -p <EXPOSED PORT>:<CONTAINER PORT> <imageId>
 ```
 #### Running the scripts
