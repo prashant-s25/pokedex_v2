@@ -27,7 +27,6 @@ const initialState = {
     async (id: string = '') => {
       try {
         const {name,weight,types,height,abilities,stats} :any = await fetchRequestById(id);
-        console.log(name,'name slice')
         const pokemon = {stats:{}};
         pokemon['name'] = name;
         pokemon['abilities'] = abilities.map(ele=>ele.ability.name).join(', ');
@@ -60,7 +59,6 @@ export const pokedexDetailsSlice = createSlice({
       };
     });
       builder.addCase(fetchDetailsName.fulfilled, (state : IPokemonDetails, action: any) => {
-        console.log({payload:action.payload})
         state.name=action.payload.name;
         state.abilities=action.payload.abilities;
         state.height=action.payload.height;

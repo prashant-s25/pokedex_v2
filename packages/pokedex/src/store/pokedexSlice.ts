@@ -66,7 +66,7 @@ export const fetchPokemonData =
         getState()?.pokedex?.pokemonList[`page${pageNumber}`]?.length === 0
       ) {
         const data = await fetchRequest(
-          pageNumber === 1 ? 0 : pageNumber * 20 - 1,
+          (pageNumber-1) * 20,
           20
         );
         if (data) {

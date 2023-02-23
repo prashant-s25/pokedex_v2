@@ -12,7 +12,6 @@ import {  AppStore, wrapper } from '../store/store';
 
 const Index = () => {
   const {pokemonList, pokemonCount, currentPage} = useSelector(pokemonState);
-  console.log({pokemonList, pokemonCount, currentPage})
   const dispatch = useDispatch() as any;
 
   const CustomPagination = () => {
@@ -23,7 +22,6 @@ const Index = () => {
         count={Math.ceil(pokemonCount/20)}
         page={currentPage}
         onChange={(e,p) => {
-          console.log(p);
           dispatch(fetchPokemonData(p));
         }}
       />
