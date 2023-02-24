@@ -37,8 +37,6 @@ const Index = () => {
   return (
     <div className='titleWrapper'>
       <div className='textStyle'>Welcome to pokedex</div>
-      <>
-      </>
       <div style={{ height: 800, width: '100%' }}  data-testid='datagrid'>
         <DataGrid
           disableSelectionOnClick
