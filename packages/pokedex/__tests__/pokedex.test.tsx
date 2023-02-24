@@ -5,7 +5,7 @@ import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import Index from '../src/pages'
-import Pokemon from '../src/pages/[name]'
+import Pokemon from '../src/pages/pokemon/[name]'
 
 const mock_store = {
   pokedex:{

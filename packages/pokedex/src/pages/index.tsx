@@ -28,7 +28,7 @@ const Index = () => {
     );
   };
   const onRowClick = (row: any) => {
-    Router.push(`/${row.row.name}`);
+    Router.push(`/pokemon/${row.row.name}`);
   };
   const columns: GridColDef[] = [
     { field: 'name', headerName: 'Pokemon Name', width: 500 },

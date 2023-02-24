@@ -32,7 +32,6 @@ const initialState = {
         pokemon['abilities'] = abilities.map(ele=>ele.ability.name).join(', ');
         pokemon['height'] = height;
         for (const ele of stats) {
-          console.log(ele.stat.name,ele.base_stat)
           pokemon['stats'][ele.stat.name] = ele.base_stat
         }
         pokemon['types']= types.map(ele=>ele.type.name).join(', ');

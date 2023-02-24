@@ -6,9 +6,9 @@ import { fetchRequest } from "utils";
 import {
   fetchDetailsName,
   pokemonDetailsState,
-} from "../store/pokedexDetailsSlice";
-import { PokemonData } from "../store/pokedexSlice";
-import { wrapper } from "../store/store";
+} from "../../store/pokedexDetailsSlice";
+import { PokemonData } from "../../store/pokedexSlice";
+import { wrapper } from "../../store/store";
 
 const Pokemon: React.FC<any> = () => {
   const data = useSelector(pokemonDetailsState);
